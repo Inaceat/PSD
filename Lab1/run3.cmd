@@ -1,0 +1,1 @@
+java -cp lib/calc.jar InfixToPolizConverter (a-b)/(2*c-1) | java -jar lib/calc.jar a=12 b=2 c=3

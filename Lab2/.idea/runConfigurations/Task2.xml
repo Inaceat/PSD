@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Task2" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Task2.StringChanger" />
+    <module name="Lab2" />
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <method v="2" />
+  </configuration>
+</component>

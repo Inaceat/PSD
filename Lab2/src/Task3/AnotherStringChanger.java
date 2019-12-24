@@ -1,20 +1,20 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+package Task3;
+
+import by.vsu.mf.ai.ssd.strings.Job;
+import by.vsu.mf.ai.ssd.strings.Manager;
+
 import java.util.regex.Pattern;
 
-public class StringChanger
+public class AnotherStringChanger implements Job
 {
     public static void main(String[] args)
-            throws IOException
     {
-        //Reading strings
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        
-        System.out.println("Enter string:");
-        
-        String readString = reader.readLine();
-        
+        Manager.createWindow(new AnotherStringChanger());
+    }
+    
+    @Override
+    public void perform(StringBuilder stringBuilder)
+    {
         /*
         (
             (                   number from 0 to 255:
@@ -40,6 +40,6 @@ public class StringChanger
         var ipPattern = Pattern.compile(
                 "(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])([^0-9]|$)");
         
-        System.out.println(ipPattern.matcher(readString).replaceAll("\\${$0}"));
+        stringBuilder.replace(0, stringBuilder.length(), ipPattern.matcher(stringBuilder).replaceAll("\\${$0}"));
     }
 }

@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Task1" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Task1.StringSorter" />
+    <module name="Lab2" />
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <RunnerSettings RunnerId="Run" />
+    <ConfigurationWrapper RunnerId="Run" />
+    <method v="2" />
+  </configuration>
+</component>

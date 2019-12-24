@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Task4" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="Task4.DateProcessor.DateProcessor" />
+    <option name="MAIN_CLASS_NAME" value="Task4.Main" />
     <module name="Lab2" />
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     <method v="2" />

@@ -20,6 +20,7 @@ public class StringChanger
         /*
         (
             (                   number from 0 to 255:
+                [0-9] |             0 to 9
                 [1-9][0-9] |        10 to 99
                 1[0-9]{2} |         100 to 199
                 2[0-4][0-9] |       200 to 249

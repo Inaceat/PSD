@@ -1,39 +1,49 @@
 package Task1;
 
-public class ArrayProcessor
+import Task1.UI.ArrayUI;
+import Task1.UI.MenuItem;
+import Task1.Work.ArrayWorker;
+
+class ArrayProcessor
 {
     private ArrayUI     _arrayUI;
     private ArrayWorker _worker;
 
-    public ArrayProcessor()
+    ArrayProcessor()
     {
         _arrayUI = new ArrayUI(MenuItem.GetNames());
 
         _worker = new ArrayWorker();
     }
 
-    public void Start()
+    void Start()
     {
         while (true)
         {
             switch (_arrayUI.AskMenuItemFromUser())
             {
+                case FillArrayRandomly:
+                    //_worker.SetRandomArray(_arrayUI.ReadArraySize());
+                    break;
+                    
+                case ReadArray:
+                    //_worker.SetArray(_arrayUI.ReadRealArray());
+                    break;
+                    
+                case ShowArray:
+                    //_arrayUI.Write(_worker.Array());
+                    break;
+                    
+                case Do1:
+                    //_worker.Do1();
+                    break;
+                    
+                case Do2:
+                    //_worker.Do2();
+                    break;
+                    
                 case Exit:
                     return;
-
-                case PrintHello:
-                    _arrayUI.Write("Hello");
-                    break;
-
-                case Echo:
-                    var x = new double[2];
-                    x[0] = 0.12;
-                    x[1] = -213.313;
-                    _arrayUI.Write(x);
-                    break;
-
-                default:
-                    break;
             }
         }
     }

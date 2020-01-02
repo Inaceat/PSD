@@ -59,6 +59,11 @@ public class ArrayUI
         System.out.println(string);
     }
     
+    public void Write(double number)
+    {
+        System.out.println(number);
+    }
+    
     public void Write(double[] realArray)
     {
         StringBuilder result = new StringBuilder();

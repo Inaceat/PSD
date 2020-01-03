@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Task2" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Task2.Main" />
+    <module name="Lab3" />
+    <method v="2" />
+  </configuration>
+</component>

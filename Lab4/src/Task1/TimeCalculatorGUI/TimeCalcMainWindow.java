@@ -1,7 +1,8 @@
-package Task1.TimeCalcGUI;
+package Task1.TimeCalculatorGUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class TimeCalcMainWindow
         extends JFrame
@@ -10,13 +11,13 @@ public class TimeCalcMainWindow
     
     private JTextField _timeInput;
     private JTextField _minutesInput;
-    private JTextField _timeOutput;
+    private JTextField _timeResult;
     
     private JButton _calculateButton;
     
     public TimeCalcMainWindow()
     {
-        super("Time calculator");
+        super("Time calculator: subtract minutes");
     
         _contentPane = new JPanel();
         
@@ -30,24 +31,47 @@ public class TimeCalcMainWindow
         _minutesInput.setHorizontalAlignment(SwingConstants.RIGHT);
         _minutesInput.setPreferredSize(new Dimension(100, 30));
     
-        _timeOutput = new JTextField();
-        _timeOutput.setText("");
-        _timeOutput.setHorizontalAlignment(SwingConstants.RIGHT);
-        _timeOutput.setPreferredSize(new Dimension(100, 30));
-        _timeOutput.setEnabled(false);
+        _timeResult = new JTextField();
+        _timeResult.setText("");
+        _timeResult.setHorizontalAlignment(SwingConstants.RIGHT);
+        _timeResult.setPreferredSize(new Dimension(100, 30));
+        _timeResult.setEnabled(false);
     
         _calculateButton = new JButton("Calc");
         
         _contentPane.add(_timeInput);
         _contentPane.add(_minutesInput);
         _contentPane.add(_calculateButton);
-        _contentPane.add(_timeOutput);
+        _contentPane.add(_timeResult);
         
         setContentPane(_contentPane);
         setBounds(600, 300, 400, 200);
         
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+    
+    public void Show()
+    {
         setVisible(true);
+    }
+    public void AddCalcButtonListener(ActionListener listener)
+    {
+        _calculateButton.addActionListener(listener);
+    }
+    
+    
+    public String GetTimeInput()
+    {
+        return _timeInput.getText();
+    }
+    public String GetMinutesInput()
+    {
+        return _minutesInput.getText();
+    }
+    
+    public void SetResult(String s)
+    {
+        _timeResult.setText(s);
     }
 }
